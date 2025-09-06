@@ -1,0 +1,88 @@
+/* Full-screen gradient background */
+.admin-profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;  /* Full viewport height */
+  width: 100vw;       /* Full viewport width */
+  background-size: 800% 800%;
+  animation: gradientAnimation 15s ease infinite;
+  overflow: hidden; /* ensures no scrollbars appear */
+  position: relative;
+}
+
+/* Gradient animation */
+@keyframes gradientAnimation {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+/* Card styling */
+.admin-profile-card {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2.5rem 3rem;
+  border-radius: 1rem;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  animation: fadeInCard 0.8s ease forwards;
+  z-index: 1; /* in front of background */
+}
+
+/* Card fade-in animation */
+@keyframes fadeInCard {
+  0% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Profile image styling */
+.admin-profile-image {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 4px solid #ffffff;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.admin-profile-image:hover {
+  transform: scale(1.1);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+}
+
+/* Name styling */
+.admin-profile-name {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+/* Info styling */
+.admin-profile-info {
+  font-size: 1rem;
+  margin: 0.3rem 0;
+  color: #555;
+}
+
+/* Button styling */
+.admin-profile-button {
+  margin-top: 1.5rem;
+  padding: 0.6rem 1.5rem;
+  background-color: #4f46e5;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.admin-profile-button:hover {
+  background-color: #6366f1;
+  transform: scale(1.05);
+}

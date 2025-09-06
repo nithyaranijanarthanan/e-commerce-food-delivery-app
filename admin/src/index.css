@@ -1,0 +1,62 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap'); */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Outfit;
+  }
+
+  body{
+    min-height: 100vh;
+    background-color: #fcfcfc;
+  }
+
+  a{
+  text-decoration: none;
+  color: inherit;
+}
+
+hr{
+    border: none;
+    height: 1px;
+    background-color: #a9a9a9;
+}
+
+.app-content{
+  display: flex;
+}
+
+.flex-col{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cursor{
+  cursor: pointer;
+}
+/* === Global layout for right content area === */
+.app-content {
+  display: flex;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+/* Right side panel (routes render here) */
+.main-outlet {
+  flex: 1;
+  padding: 24px;
+  background: #f3f4f6; /* soft grey behind cards */
+  min-height: 100vh;
+}
+
+/* Optional: make hr subtle */
+hr {
+  border: 0;
+  border-top: 1px solid rgba(0,0,0,0.06);
+}

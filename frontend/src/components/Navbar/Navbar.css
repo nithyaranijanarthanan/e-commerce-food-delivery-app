@@ -1,0 +1,270 @@
+/* ========================= */
+/* Navbar Base Styles        */
+/* ========================= */
+
+.navbar {
+  width: 100%;
+  max-width: 1200px;   
+  margin: 0 auto;      
+  padding: 15px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Logo */
+.logo {
+  width: 140px;
+  cursor: pointer;
+  max-width: 100%; 
+}
+
+/* ========================= */
+/* Menu                      */
+/* ========================= */
+
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #1f2937;
+  text-transform: capitalize;
+  margin-right: 50px;
+  margin-right: 50px;
+}
+
+.navbar-menu a {
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.navbar-menu a:hover,
+.navbar-menu .active {
+  color: #f97316;
+}
+
+/* Active underline */
+.navbar-menu .active::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -3px;
+  left: 0;
+  background-color: #f97316;
+}
+
+/* ========================= */
+/* Right Section             */
+/* ========================= */
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Search */
+.navbar-search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #f9fafb;
+  padding: 6px 12px;
+  border-radius: 30px;
+  border: 1px solid #d1d5db;
+  min-width: 220px;
+  margin-right: 40px;
+}
+
+.navbar-search input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 6px;
+  font-size: 14px;
+  background-color: transparent;
+}
+
+/* Cart */
+.navbar-search-icon {
+  position: relative;
+  margin-right: 40px;
+}
+
+.navbar-search-icon .dot {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #f97316;
+  border-radius: 50%;
+  top: -6px;
+  right: -6px;
+}
+
+/* Sign In Button */
+.navbar button {
+  background-color: transparent;
+  font-size: 14px;
+  font-weight: 500;
+  color: #1f2937;
+  border: 2px solid #f97316;
+  padding: 6px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.navbar button:hover {
+  background-color: #f97316;
+  color: #fff;
+}
+
+/* ========================= */
+/* Profile                   */
+/* ========================= */
+
+.navbar-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.navbar-profile img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 2px solid #f97316;
+  padding: 2px;
+}
+
+/* Username */
+.navbar-username {
+  margin-top: 5px;
+  font-size: 13px;
+  color: #555;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* ========================= */
+/* Hamburger for Mobile      */
+/* ========================= */
+
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* ========================= */
+/* Responsive Media Queries  */
+/* ========================= */
+
+/* Tablets (≤1024px) */
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 12px 4%; /* balance padding */
+  }
+  .logo {
+    width: 120px;
+  }
+  .navbar-search {
+    min-width: 180px;
+  }
+}
+
+/* Mobile (≤768px) */
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+    padding: 10px 6%; /* balanced padding */
+  }
+
+  /* Hamburger shown */
+  .hamburger {
+    display: block;
+    margin-left: auto;
+  }
+
+  /* Hide desktop menu */
+  .navbar-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #fff;
+    border-radius: 8px;
+    margin-top: 12px;
+    padding: 10px 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+
+  /* Show when toggled */
+  .navbar-menu.open {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .navbar-menu a {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    font-size: 15px;
+  }
+
+  /* Right section */
+  .navbar-right {
+    width: 100%;
+    justify-content: center;
+    margin-top: 12px;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+
+  .navbar-search {
+    flex: 1;
+    min-width: auto;
+    max-width: 80%;
+  }
+
+  .navbar-profile {
+    flex-direction: column;
+    margin-top: 5px;
+  }
+
+  .navbar-username {
+    font-size: 12px;
+  }
+}
+
+/* Small Mobile (≤480px) */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 10px 8%; /* tighter but balanced */
+  }
+
+  .logo {
+    width: 90px;
+  }
+
+  .navbar-search {
+    max-width: 100%;
+  }
+
+  .navbar-menu a {
+    font-size: 14px;
+  }
+
+  .navbar-right {
+    flex-direction: column;
+    gap: 12px;
+  }
+}

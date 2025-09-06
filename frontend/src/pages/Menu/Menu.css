@@ -1,0 +1,7 @@
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* responsive grid */
+  gap: 20px;         /* space between cards */
+  margin-top: 20px;
+  justify-items: start; /* keep items aligned left, not centered */
+}

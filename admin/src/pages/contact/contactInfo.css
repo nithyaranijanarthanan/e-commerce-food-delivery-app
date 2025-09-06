@@ -1,0 +1,119 @@
+/* Container */
+.admin-contact-container {
+  max-width: 96rem; /* 6xl */
+  margin: 4rem auto 0 auto;
+  padding: 0 1rem;
+  font-family: sans-serif;
+}
+
+/* Heading */
+.admin-contact-heading {
+  text-align: center;
+  font-size: 2rem; /* 3xl */
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #1f2937; /* gray-800 */
+}
+
+/* Table wrapper for horizontal scroll */
+.admin-contact-table-wrapper {
+  overflow-x: auto;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Table */
+.admin-contact-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 100%;
+  table-layout: auto;
+}
+
+/* Table head */
+.admin-contact-table th {
+  padding: 1rem 1.5rem;
+  text-align: left;
+  font-weight: 700;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background-color: white; /* gray-100 */
+  color: #374151; /* gray-700 */
+  border-bottom: 2px solid #e5e7eb; /* gray-200 */
+}
+
+/* Table body rows */
+.admin-contact-table tbody tr {
+  transition: background-color 0.2s ease-in-out;
+}
+
+.admin-contact-table tbody tr:nth-child(even) {
+  background-color: #f9fafb; /* gray-50 */
+}
+
+.admin-contact-table tbody tr:nth-child(odd) {
+  background-color: #d4e4f5; 
+}
+
+.admin-contact-table tbody tr:hover {
+  background-color: #eff6ff; /* blue-50 */
+}
+
+/* Table cells */
+.admin-contact-table td {
+  padding: 1rem 1.5rem;
+  color: #374151; /* gray-700 */
+  word-break: break-word;
+  vertical-align: top;
+}
+
+/* Date cell styling */
+.admin-contact-table td.date {
+  color: #6b7280; /* gray-500 */
+  font-size: 0.875rem;
+  white-space: nowrap;
+}
+
+/* Responsive: stack table for small screens */
+@media (max-width: 640px) {
+  .admin-contact-table thead {
+    display: none;
+  }
+
+  .admin-contact-table, 
+  .admin-contact-table tbody, 
+  .admin-contact-table tr, 
+  .admin-contact-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .admin-contact-table tr {
+    margin-bottom: 1rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+  }
+
+  .admin-contact-table td {
+    padding: 0.5rem 1rem;
+    text-align: right;
+    position: relative;
+  }
+
+  .admin-contact-table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    color: #ecf0f8;
+    text-align: left;
+  }
+
+  .admin-contact-table td.date {
+    white-space: normal;
+  }
+}

@@ -1,0 +1,7 @@
+/* Grid layout for the Top Dishes on the Home page */
+.top-dish-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.5rem;        /* space between cards */
+  row-gap: 2.5rem;    /* vertical space between rows */
+}
